@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sentinel
+  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8718
+      eager: true
+
+server:
+  port: 8889
+  tomcat:
+    max-threads: 20

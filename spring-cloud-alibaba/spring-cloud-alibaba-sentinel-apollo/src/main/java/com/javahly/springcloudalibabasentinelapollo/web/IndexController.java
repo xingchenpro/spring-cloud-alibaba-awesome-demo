@@ -21,41 +21,14 @@ public class IndexController {
     public String index() {
         return "index";
     }
-
-
-    /**
-     * 如果没有引用 @SentinelResource 注解,限流名称就是接口名称
-     * fallback 服务降级(超时，异常)执行方法
-     * blockHandler 限流/熔断执行方法
-     * @return
-     */
     @SentinelResource(value = "getIndexConsole",blockHandler = "getOrderQpsEx")
     @RequestMapping("/getIndexConsole")
     public String getIndexConsole() {
         return "getIndexConsole";
     }
 
-    /**
-     * RT：如果接口执行时间超过10秒，触发熔断
-     * 时间窗口：在几秒内不能访问
-     * @return
-     */
-    @SentinelResource(value = "getOrderConsole",fallback = "getFallBackEx")
-    @RequestMapping("/getOrderConsole")
-    public String getOrderConsole() {
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "getOrderConsole";
-    }
-
     public String getOrderQpsEx(BlockException e) {
         return "接口已经被限流";
     }
 
-    public String getFallBackEx() {
-        return "接口已经被熔断";
-    }
 }

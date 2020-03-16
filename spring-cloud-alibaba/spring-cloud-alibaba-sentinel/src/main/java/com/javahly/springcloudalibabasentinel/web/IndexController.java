@@ -29,7 +29,7 @@ public class IndexController {
      * @return
      */
     @SentinelResource(value = "getIndexConsole",blockHandler = "getOrderQpsEx")
-    @RequestMapping("/getIndexConsole")
+    @RequestMapping("/getInde xConsole")
     public String getIndexConsole() {
         return "getIndexConsole";
     }

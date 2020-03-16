@@ -1,0 +1,13 @@
+
+server:
+  port: 8883
+  servlet.context-path: /user
+
+eureka:
+ client:
+   serviceUrl:
+    defaultZone: http://106.13.1.171:8761/eureka/
+
+spring:
+  application:
+    name: user-service

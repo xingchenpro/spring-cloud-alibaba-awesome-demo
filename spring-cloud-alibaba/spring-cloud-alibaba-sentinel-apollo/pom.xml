@@ -45,6 +45,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+
 		</dependency>
 
 		<dependency>
@@ -52,6 +53,7 @@
 			<artifactId>sentinel-datasource-apollo</artifactId>
 			<version>1.4.1</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

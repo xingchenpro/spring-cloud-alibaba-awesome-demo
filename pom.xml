@@ -5,6 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
         <version>2.4.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -12,11 +13,39 @@
     <artifactId>spring-cloud-alibaba-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-alibaba-learning</name>
+=======
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.stardust</groupId>
+    <artifactId>spring-cloud-ilford-learning</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-cloud-ilford-learning</name>
+>>>>>>> 606794e1bd85f4d3f212f4fd41cd48dc52c05380
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
+<<<<<<< HEAD
     <dependencies>
+=======
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2020.0.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <dependencies>
+
+>>>>>>> 606794e1bd85f4d3f212f4fd41cd48dc52c05380
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -24,9 +53,26 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+=======
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+>>>>>>> 606794e1bd85f4d3f212f4fd41cd48dc52c05380
     </dependencies>
 
     <build>

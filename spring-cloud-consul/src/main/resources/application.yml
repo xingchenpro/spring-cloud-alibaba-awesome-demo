@@ -1,0 +1,26 @@
+server:
+  port: 8781
+
+spring:
+  application:
+    name: stardust-producer
+  cloud:
+    consul:
+      host: 123.57.173.162
+      port: 8500
+      discovery:
+        # 显示客户端 ip
+        prefer-ip-address: true
+        #服务名称
+        serviceName: ${spring.application.name}
+        # 开启健康检查
+        heartbeat:
+          enabled: true
+        #健康检查时间间隔
+        health-check-interval: 5s
+        #启用健康检查
+        enabled: true
+        # 配置可以自动剔除，默认不会自动剔除
+        deregister: false
+        # 服务关闭 30 秒后自动剔除
+        health-check-critical-timeout: 30s

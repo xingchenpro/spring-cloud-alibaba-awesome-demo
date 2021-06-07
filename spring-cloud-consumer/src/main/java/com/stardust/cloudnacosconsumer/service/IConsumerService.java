@@ -9,6 +9,8 @@ package com.stardust.cloudnacosconsumer.service;
 public interface IConsumerService {
 
 
-    String consumer();
+    String consumer1();
+
+    String consumer2();
 
 }

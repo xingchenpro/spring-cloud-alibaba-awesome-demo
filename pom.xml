@@ -12,7 +12,7 @@
         <java.version>1.8</java.version>
         <com.alibaba.cloud.version>2021.1</com.alibaba.cloud.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
-        <spring-boot.version>2.4.1</spring-boot.version>
+        <spring-boot.version>2.4.5</spring-boot.version>
         <lombok.version>1.18.6</lombok.version>
         <swagger2.version>2.6.1</swagger2.version>
     </properties>
@@ -30,15 +30,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
+        <!-- 在SpringCloud 2020版，由于spring-cloud-commons提供的Bootstrap不再被默认启用
+可以引入新的启动器来重新启用它 -->
+
+
 
     </dependencies>
 
@@ -89,6 +85,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
             </dependency>
 
         </dependencies>

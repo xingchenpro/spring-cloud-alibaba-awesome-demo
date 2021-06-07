@@ -1,5 +1,6 @@
 package com.stardust.cloudnacosconsumer.service.imp;
 
+import com.stardust.cloudnacosconsumer.feign.OpenFeignClient;
 import com.stardust.cloudnacosconsumer.service.IConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -26,10 +27,17 @@ public class ConsumerServiceImpl implements IConsumerService {
     private LoadBalancerClient loadBalancerClient;
 
 
-    public String consumer() {
+    @Resource
+    private OpenFeignClient openFeignClient;
+
+
+    public String consumer1() {
         ServiceInstance serviceInstance = loadBalancerClient.choose("producer-service");
         String url = serviceInstance.getUri() + "/index";
         return restTemplate.getForObject(url, String.class);
+    }
 
+    public String consumer2() {
+        return openFeignClient.openFeignTest();
     }
 }

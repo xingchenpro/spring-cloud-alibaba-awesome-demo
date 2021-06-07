@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: consumer-service
+  cloud:
+    nacos:
+      discovery:
+        # nacos服务器地址
+        server-addr: 123.57.173.162:8848
+
+
+

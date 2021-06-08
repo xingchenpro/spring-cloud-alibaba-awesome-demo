@@ -44,13 +44,13 @@ public class ProducerController {
     public String testFallBack() {
         try {
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+
         }
         return "testFallBack";
     }
 
-    public String testFallBackEx() {
+    public String testFallBackEx(Throwable e) {
         return "接口已经被熔断";
     }
 

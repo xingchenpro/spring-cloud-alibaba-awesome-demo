@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>cloud-nacos-consumer</artifactId>
+    <artifactId>spring-cloud-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-consumer</name>
     <description>Demo project for Spring Boot</description>

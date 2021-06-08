@@ -1,4 +1,4 @@
-package com.stardust.cloudnacosconsumer.service;
+package com.stardust.springcloudconsumer.service;
 
 /**
  * @author :hly

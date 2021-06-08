@@ -1,4 +1,4 @@
-package com.stardust.cloudnacosconsumer.feign;
+package com.stardust.springcloudconsumer.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

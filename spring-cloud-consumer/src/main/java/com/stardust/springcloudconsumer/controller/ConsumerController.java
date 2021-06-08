@@ -1,7 +1,7 @@
-package com.stardust.cloudnacosconsumer.controller;
+package com.stardust.springcloudconsumer.controller;
 
-import com.stardust.cloudnacosconsumer.feign.OpenFeignClient;
-import com.stardust.cloudnacosconsumer.service.IConsumerService;
+import com.stardust.springcloudconsumer.feign.OpenFeignClient;
+import com.stardust.springcloudconsumer.service.IConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;

@@ -1,7 +1,7 @@
-package com.stardust.cloudnacosconsumer.service.imp;
+package com.stardust.springcloudconsumer.service.imp;
 
-import com.stardust.cloudnacosconsumer.feign.OpenFeignClient;
-import com.stardust.cloudnacosconsumer.service.IConsumerService;
+import com.stardust.springcloudconsumer.feign.OpenFeignClient;
+import com.stardust.springcloudconsumer.service.IConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;

@@ -14,7 +14,7 @@
         <spring-cloud.version>2020.0.2</spring-cloud.version>
         <spring-boot.version>2.4.5</spring-boot.version>
         <lombok.version>1.18.6</lombok.version>
-        <swagger2.version>2.6.1</swagger2.version>
+        <swagger2.version>2.9.2</swagger2.version>
     </properties>
 
     <dependencies>
@@ -30,6 +30,10 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <!-- 在SpringCloud 2020版，由于spring-cloud-commons提供的Bootstrap不再被默认启用
 可以引入新的启动器来重新启用它 -->

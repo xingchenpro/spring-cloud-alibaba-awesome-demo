@@ -7,11 +7,11 @@ spring:
     nacos:
       discovery:
         # nacos服务器地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 123.57.173.162:8848
         service: ${spring.application.name}
       config:
         ###配置中心连接地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 123.57.173.162:8848
 #        ###分组
         group: DEFAULT_GROUP
         ###类型

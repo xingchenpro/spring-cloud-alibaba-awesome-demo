@@ -31,7 +31,7 @@ public class ProducerController {
     @SentinelResource(value = "testLimit",blockHandler = "testLimitEx")
     @RequestMapping("/testLimit")
     public String testLimit() {
-        return "testLimit";
+        return "接口正常访问";
     }
 
     public String testLimitEx(BlockException e) {
@@ -47,11 +47,11 @@ public class ProducerController {
         } catch (Exception e) {
 
         }
-        return "testFallBack";
+        return "接口正常访问";
     }
 
     public String testFallBackEx(Throwable e) {
-        return "接口已经被熔断";
+        return "接口已经被熔断降级";
     }
 
 

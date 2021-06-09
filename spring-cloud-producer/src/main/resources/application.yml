@@ -12,4 +12,4 @@ spring:
   application:
     name: producer-service
 server:
-  port: 8083
+  port: 8084

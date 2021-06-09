@@ -1,0 +1,12 @@
+
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8718
+      eager: true
+  application:
+    name: sentinel-service
+server:
+  port: 8085

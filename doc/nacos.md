@@ -26,12 +26,6 @@ yum -y install git
 
 
 
-
-
-
-
-
-
 Eureka 的最大竞争对手是 Nacos
 
 SpringCloudAlibaba 对 SringCloud 组件进行了一些扩展
@@ -136,8 +130,6 @@ Paxos
 
 
 
-
-
 Raft 算法，分布式一致性协议算法
 
 1、状态：
@@ -192,13 +184,33 @@ Raft 算法，分布式一致性协议算法
 
 领导者把数据同步给跟随者，也要满足过半机制
 
-
-
-
-
 与 zab 类似，zab 是 min 和 zxid ，raft 是超时随机数。
 
 
+
+
+
+
+
+```
+localhost:8085/testFallBack
+```
+
+
+
+```
+localhost:8085/testLimit
+```
+
+
+
+熔断降级
+
+比例阈值：
+
+每秒异常总数超过这个阈值，就会进入熔断降级状态。
+
+https://blog.csdn.net/xiongxianze/article/details/87572916
 
 
 

@@ -26,13 +26,11 @@ public class ConsumerServiceImpl implements IConsumerService {
     @Resource
     private LoadBalancerClient loadBalancerClient;
 
-
     @Resource
     private OpenFeignClient openFeignClient;
 
-
     public String consumer1() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("producer-service");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("provider-service");
         String url = serviceInstance.getUri() + "/index";
         return restTemplate.getForObject(url, String.class);
     }

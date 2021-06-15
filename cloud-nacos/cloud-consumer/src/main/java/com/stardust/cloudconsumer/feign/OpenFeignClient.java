@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date :2021/6/8
  * @desc :
  */
-@FeignClient(value = "producer-service")
+@FeignClient(value = "provider-service")
 public interface OpenFeignClient {
 
     @GetMapping("/index")

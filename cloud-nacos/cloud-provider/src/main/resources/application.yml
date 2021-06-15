@@ -6,6 +6,6 @@ spring:
       # nacos服务器地址
         server-addr: 123.57.173.162:8848
   application:
-    name: producer-service
+    name: provider-service
 server:
-  port: 8084
+  port: 8082

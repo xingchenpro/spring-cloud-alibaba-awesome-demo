@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * @date :2021/6/7
  * @desc :
  */
-@RefreshScope
+@RefreshScope//实现配置，实例热加载
 @RestController
 public class ConsumerController {
 
@@ -34,7 +34,6 @@ public class ConsumerController {
     public String test1() {
         return consumerService.consumer1();
     }
-
 
     @GetMapping("/test2")
     public String test2() {

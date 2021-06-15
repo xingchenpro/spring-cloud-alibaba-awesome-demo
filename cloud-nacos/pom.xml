@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>cloud-provider</artifactId>
+    <artifactId>cloud-nacos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cloud-provider</name>
     <description>Demo project for Spring Boot</description>

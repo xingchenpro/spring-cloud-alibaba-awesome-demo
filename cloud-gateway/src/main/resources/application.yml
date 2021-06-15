@@ -9,21 +9,24 @@ spring:
     gateway:
       discovery:
         locator:
-        # 允许注册中心获取地址
+          # 开启以服务id去注册中心上获取转发地址
           enabled: true
       routes:
-      - id: producer--route
-        uri: lb://producer-service
+        # 路由 id
+      - id: provider-route
+        # 基于 lb 负载均衡形式转发
+        uri: lb://provider-service
         predicates:
-        - Path=/producer/**
+        - Path=/provider/**
         filters:
+          # 跳过一级前缀
         - StripPrefix=1
       - id: consumer-route
         uri: lb://consumer-service
         predicates:
-        - Path=/consumer/**
+        - Path=/api/consumer/**
         filters:
-        - StripPrefix=1
+        - StripPrefix=2
     nacos:
       discovery:
         server-addr: 123.57.173.162:8848
